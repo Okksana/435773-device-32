@@ -1,0 +1,420 @@
+/* 1.0 Fonts ------------------------------------------------------------ */
+/* 1.1 Rubik */
+@font-face {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 400;
+	src: url("fonts/rubik/rubik-400.woff2") format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 700;
+	src: url("fonts/rubik/rubik-700.woff2") format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 800;
+	src: url("fonts/rubik/rubik-800.woff2") format("woff2");
+	font-display: swap;
+}
+
+/* 1.2 Raleway */
+@font-face {
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 800;
+	src: url("fonts/raleway/raleway-800.woff2") format("woff2");
+	font-display: swap;
+}
+
+/* 2.0 Body (Base styles) ------------------------------------------------------------ */
+body {
+	font-family: Rubik, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+
+	color: rgba(68, 68, 68, 1.0);
+}
+
+body,
+.main-index,
+.main-inner,
+.inner-header,
+.catalog-products,
+.top-goods,
+.categories,
+.services,
+.wrapper {
+	background-color: rgba(255, 255, 255, 1.0);
+}
+
+/* 2.1 Delete underline for links */
+.txt-decor {
+	text-decoration: none;
+}
+
+/* 2.2 Links (yellow line) */
+.link-button {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 1.0);
+}
+
+/* 3.0 Header Navigation (Base styles) ------------------------------------------------------------ */
+.page-header {
+	background-color: rgba(255, 225, 127, 1);
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.navigation-search,
+.user-navigation-link,
+.cart-navigation-link {
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.goods-counter {
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.page-navigation-link {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+.simple-catalog-link {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+/* 3.1 Links (Base color) */
+.user-navigation-link,
+.cart-navigation-link,
+.page-navigation-link,
+.simple-catalog-link {
+	color: rgba(0, 0, 0, 1.0);
+}
+
+/* 4.0 Main (Base styles) ------------------------------------------------------------ */
+/* 4.1.0 Slider */
+.slider-button {
+	background-color: rgba(255, 255, 255, 1.0);
+	border: none;
+}
+
+.slider-number {
+	font-size: 180px;
+	font-weight: 800;
+	line-height: 220px;
+
+	background-color: rgba(255, 225, 127, 1);
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.slider-content b {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-weight: 800;
+	line-height: 50px;
+}
+
+/* 4.1.1 Slider Table */
+.slider-table-features {
+}
+
+.slider-table-features th {
+	font-size: 36px;
+	font-weight: normal;
+	text-align: left;
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.slider-table-features td {
+	font-size: 16px;
+}
+
+/* 4.2.0 Categories */
+.categories-link figcaption {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	line-height: 24px;
+
+	color: rgba(0, 0, 0, 1.0);
+}
+
+/* 4.3.0 Services */
+.services-button {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 1.0);
+	border: none;
+}
+
+.services-button-current {
+	background-color: rgba(0, 0, 0, 1.0);
+	color: rgba(255, 225, 127, 1);
+}
+
+.services-content-item h3 {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-weight: 800;
+	line-height: 50px;
+
+	background-color: rgba(240, 240, 240, 1);
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.services-content-item p {
+	background-color: rgba(240, 240, 240, 1);
+}
+
+/* 4.4.0 Delivery-order */
+.delivery-button {
+	background-color: rgba(240, 240, 240, 1);
+	border: none;
+}
+
+.delivery-button p {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 23px;
+	text-transform: uppercase;
+
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.delivery-button .tip {
+	background-color: rgba(220, 220, 220, 0.5);
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* 4.5.0 About-us, Contacs */
+.about-us-title,
+.contacs-title {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-weight: 800;
+	line-height: 50px;
+
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.contacs-subtitle {
+	font-size: 24px;
+	font-weight: 700;	
+}
+
+.transport-companies-item b {
+	font-weight: 700;
+	line-height: 20px;
+
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.contacts-address-text {
+	font-style: normal;
+}
+
+.contacts-phone {
+	font-style: normal;
+	color: rgba(68, 68, 68, 1);
+}
+
+/* 4.6.0 Mailing */
+.mailing {
+	background-color: rgba(240, 240, 240, 1);
+}
+
+.mailing-title {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-weight: 800;
+	line-height: 50px;
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.mailing-button-subscribe {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 1.0);
+
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* 5.0 Inner Pages (Base styles) ------------------------------------------------------------ */
+/* 5.1.0 Main Inner */
+.left-column {
+	background-color: rgba(235, 235, 235, 1);
+}
+
+.inner-header-title {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-weight: 800;
+	line-height: 50px;
+
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.breadcrumbs-link {
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.catalog-products-title {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 19px;
+	text-transform: uppercase;
+
+	background-color: rgba(220, 220, 220, 1);
+	color: rgba(0, 0, 0, 1);
+}
+
+.catalog-filter {
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.catalog-filter-title {
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+}
+
+.catalog-filter-label,
+.catalog-filter-input {
+	font-size: 15px;
+	line-height: 19px;
+
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.control {
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.button,
+.product-card-button {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 1.0);
+
+	border: none;
+}
+
+.sorting-arrow-ascending,
+.sorting-arrow-descending {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.product-card-title {
+	font-weight: 700;
+	line-height: 24px;
+	letter-spacing: -0.02em;
+
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.product-card-price {
+	line-height: 21px;
+}
+
+.pagination-load-more {
+	background-color: rgba(255, 255, 255, 1.0);
+
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination-link {
+	font-size: 16px;
+	line-height: 19px;
+
+	color: rgba(68, 68, 68, 0.3);
+}
+
+.pagination-prev,
+.pagination-next {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 1.0);
+}
+
+/* 6.0 Footer (Base styles) ------------------------------------------------------------ */
+.page-footer {
+	background-color: rgba(68, 68, 68, 1);
+	color: rgba(255, 255, 255, 1.0);
+}
+
+/* 6.1.0 Footer-address */
+.footer-address address {
+	font-size: 16px;
+	font-style: normal;
+	line-height: 19px;
+}
+
+.footer-services-list,
+.footer-socials-list {
+	text-align: center;
+}
+
+.footer-services-link {
+	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.footer-phone address,
+.footer-phone-number {
+	font-size: 16px;
+	font-style: normal;
+
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.footer-social-button {
+	color: rgba(255, 255, 255, 0.3);
+}

@@ -4,7 +4,7 @@
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 400;
-	src: url("fonts/rubik/rubik-400.woff2") format("woff2");
+	src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -12,7 +12,7 @@
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 700;
-	src: url("fonts/rubik/rubik-700.woff2") format("woff2");
+	src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -20,7 +20,7 @@
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 800;
-	src: url("fonts/rubik/rubik-800.woff2") format("woff2");
+	src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -29,7 +29,7 @@
 	font-family: Raleway;
 	font-style: normal;
 	font-weight: 800;
-	src: url("fonts/raleway/raleway-800.woff2") format("woff2");
+	src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -82,6 +82,18 @@ body,
 	line-height: 19px;
 }
 
+.navigation-search input::placeholder {
+	font-family: Rubik, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.current {
+	opacity: 0.3;
+}
+
 .goods-counter {
 	font-size: 14px;
 	line-height: 17px;
@@ -129,6 +141,8 @@ body,
 	font-size: 50px;
 	font-weight: 800;
 	line-height: 50px;
+
+	color: rgba(0, 0, 0, 1.0);
 }
 
 /* 4.1.1 Slider Table */
@@ -147,6 +161,10 @@ body,
 }
 
 /* 4.2.0 Categories */
+.categories-item img {
+	background-color: rgba(255, 225, 127, 1);
+}
+
 .categories-link figcaption {
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-weight: 800;
@@ -254,6 +272,14 @@ body,
 	color: rgba(0, 0, 0, 1.0);
 }
 
+.mailing-field::placeholder {
+	font-family: Rubik, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+
+	color: rgba(68, 68, 68, 0.5);
+}
+
 .mailing-button-subscribe {
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 18px;
@@ -302,6 +328,10 @@ body,
 	color: rgba(0, 0, 0, 1);
 }
 
+.right-column .catalog-products-title {
+	background-color: rgba(235, 235, 235, 1);
+}
+
 .catalog-filter {
 	color: rgba(0, 0, 0, 1.0);
 }
@@ -315,7 +345,7 @@ body,
 .catalog-filter-label,
 .catalog-filter-input {
 	font-size: 15px;
-	line-height: 19px;
+	line-height: 18px;
 
 	color: rgba(0, 0, 0, 0.3);
 }
@@ -338,12 +368,19 @@ body,
 	border: none;
 }
 
+.select-control {
+	font-family: Rubik, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 19px;
+}
+
 .sorting-arrow-ascending,
 .sorting-arrow-descending {
 	color: rgba(0, 0, 0, 0.2);
 }
 
 .product-card-title {
+	font-size: 18px;
 	font-weight: 700;
 	line-height: 24px;
 	letter-spacing: -0.02em;
@@ -356,6 +393,9 @@ body,
 }
 
 .pagination-load-more {
+	font-size: 16px;
+	line-height: 19px;
+
 	background-color: rgba(255, 255, 255, 1.0);
 
 	border-width: 3px;
@@ -416,5 +456,6 @@ body,
 }
 
 .footer-social-button {
-	color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.3);
+	color: rgba(68, 68, 68, 1);
 }

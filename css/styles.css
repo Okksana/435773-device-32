@@ -33,8 +33,17 @@
 	font-display: swap;
 }
 
+html {
+	height: 100%;
+}
+
 /* 2.0 Body (Base styles) ------------------------------------------------------------ */
 body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
 	font-family: Rubik, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 30px;
@@ -54,6 +63,18 @@ body,
 	background-color: rgba(255, 255, 255, 1.0);
 }
 
+.main-container {
+	flex-grow: 1;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
 /* 2.1 Delete underline for links */
 .txt-decor {
 	text-decoration: none;
@@ -71,8 +92,21 @@ body,
 
 /* 3.0 Header Navigation (Base styles) ------------------------------------------------------------ */
 .page-header {
+	box-sizing: border-box;
+	width: 1160px;
+	min-height: 300px;
+	margin: 40px auto 0 auto;
+	padding-left: 60px;
+	padding-right: 60px;
 	background-color: rgba(255, 225, 127, 1);
 	color: rgba(0, 0, 0, 1.0);
+}
+
+.header-first-row {
+	outline: 1px solid green;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 29px;
 }
 
 .navigation-search,
@@ -82,12 +116,34 @@ body,
 	line-height: 19px;
 }
 
+.navigation-search {outline: 1px solid yellow;
+	width: 520px;
+}
+
 .navigation-search input::placeholder {
 	font-family: Rubik, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 19px;
 
 	color: rgba(0, 0, 0, 0.3);
+}
+
+.user-navigation-list {outline: 1px solid red;
+	width: 245px;
+	margin-top:  0;
+	margin-bottom: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.cart-navigation-list {outline: 1px solid blue;
+	width: 245px;
+	margin-top:  0;
+	margin-bottom: 0;
+	padding: 0;
+
+	list-style-type: none;
 }
 
 .current {
@@ -99,12 +155,39 @@ body,
 	line-height: 17px;
 }
 
-.page-navigation-link {
+.page-navigation-list {outline: 1px solid pink;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.page-navigation-item {outline: 1px solid olive;
+	margin-right: 15px;
+}
+
+.page-navigation-item:first-child {outline: 1px dotted green;
+	width: 520px;
+}
+
+.page-navigation-item:nth-child(4n) {outline: 1px dotted orange;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.page-navigation-link {outline: 1px solid lime;
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-weight: 800;
 	letter-spacing: 0.2em;
 	line-height: 21px;
 	text-transform: uppercase;
+}
+
+.simple-catalog-list {
+	padding: 0;
+	list-style-type: none;
 }
 
 .simple-catalog-link {
@@ -122,9 +205,34 @@ body,
 
 /* 4.0 Main (Base styles) ------------------------------------------------------------ */
 /* 4.1.0 Slider */
+.top-goods {
+	outline: 1px dashed navy;
+	width: 1160px;
+	margin: 0 auto 70px auto;
+}
+
+.slider-content {
+	display: flex;
+}
+
+.slider-buttons {
+	outline: 1px solid aliceblue;
+	/*display: flex;*/
+	width: 560px;
+	margin-right: 40px;
+}
+
+.slider-image {
+	width: 560px;
+}
+
 .slider-button {
 	background-color: rgba(255, 255, 255, 1.0);
 	border: none;
+}
+
+.slider-right-column {
+	outline: 1px solid blanchedalmond;
 }
 
 .slider-number {
@@ -161,11 +269,47 @@ body,
 }
 
 /* 4.2.0 Categories */
+.categories-list {
+	outline: 1px solid red;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 1160px;
+	margin: 0 auto 70px auto;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.categories-item a {
+	display: block;
+}
+
+.categorie-bg-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 160px;
+	height: 160px;
+	margin-bottom: 33px;
+
+	background-color: rgba(255, 225, 127, 1);
+}
+
 .categories-item img {
 	background-color: rgba(255, 225, 127, 1);
 }
 
-.categories-link figcaption {
+.categories-item:nth-child(2) img {
+	align-self: flex-end;
+}
+
+.categories-link h3 {
+	width: 160px;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	font-size: 18px;
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-weight: 800;
 	letter-spacing: -0.02em;
@@ -175,23 +319,80 @@ body,
 }
 
 /* 4.3.0 Services */
+.services {
+	outline: 1px dashed red;
+	display: flex;
+	justify-content: center;
+
+	background-color: rgba(240, 240, 240, 1.0);
+}
+
+.services-button-list {outline: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	width: 285px;
+	margin: 0;
+	margin-bottom: 70px;
+	padding: 0;
+	padding-top: 80px;
+	list-style-type: none;
+	box-sizing: border-box;
+
+	/*border-right: 7px solid rgba(0, 0, 0, 1.0);*/
+}
+
+.services-button-item {
+	margin-bottom: 33px;
+}
+
+.services-button-list li:last-child {
+	margin-bottom: 0;
+}
+
 .services-button {
+	width: 160px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 800;
 	letter-spacing: 0.2em;
 	line-height: 21px;
 	text-transform: uppercase;
+	background-color: transparent;
 	color: rgba(0, 0, 0, 1.0);
 	border: none;
 }
 
 .services-button-current {
+	width: 280px;
 	background-color: rgba(0, 0, 0, 1.0);
+}
+
+.services-button-current .services-button {
 	color: rgba(255, 225, 127, 1);
 }
 
-.services-content-item h3 {
+.services-content-list {outline: 2px solid green;
+	width: 875px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.services-content-item {
+	box-sizing: border-box;
+	min-height: 390px;
+	padding-top: 70px;
+	padding-left: 115px;
+}
+
+.services-content-item h3 {outline: 1px dotted navy;
+	width: 500px;
+	margin: 0;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 50px;
 	font-weight: 800;
@@ -201,17 +402,22 @@ body,
 	color: rgba(0, 0, 0, 1.0);
 }
 
-.services-content-item p {
+.services-content-item p {outline: 3px double olive;
+	width: 500px;
+	min-height: 165px;
+	margin-top: 0;
+	margin-bottom: 0;
+
 	background-color: rgba(240, 240, 240, 1);
 }
 
 /* 4.4.0 Delivery-order */
-.delivery-button {
-	background-color: rgba(240, 240, 240, 1);
-	border: none;
+.delivery-order {outline: 1px dashed green;
+	width: 1160px;
+	margin: 0 auto;
 }
 
-.delivery-button p {
+.delivery-button {
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	font-weight: 800;
@@ -219,7 +425,9 @@ body,
 	line-height: 23px;
 	text-transform: uppercase;
 
+	background-color: rgba(240, 240, 240, 1);
 	color: rgba(0, 0, 0, 1.0);
+	border: none;
 }
 
 .delivery-button .tip {
@@ -228,8 +436,34 @@ body,
 }
 
 /* 4.5.0 About-us, Contacs */
+.wrapper {
+	outline: 1px solid black;
+	display: flex;
+	width: 1160px;
+	margin: 0 auto 85px auto;
+}
+
+.about-us,
+.contacts {
+	box-sizing: border-box;
+	width: 560px;
+	outline: 1px dotted orange;
+}
+
+.about-us {
+	padding-right: 70px;
+}
+
+.contacts {
+	padding-right: 45px;
+}
+
+.about-us {
+	margin-right: 40px;
+}
+
 .about-us-title,
-.contacs-title {
+.contacts-title {
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 50px;
 	font-weight: 800;
@@ -238,9 +472,18 @@ body,
 	color: rgba(0, 0, 0, 1.0);
 }
 
-.contacs-subtitle {
+.contacts-subtitle {
 	font-size: 24px;
 	font-weight: 700;	
+}
+
+.transport-companies-list {outline: 1px solid red;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.transport-companies-item {
+	padding-left: 35px;
 }
 
 .transport-companies-item b {
@@ -259,17 +502,58 @@ body,
 	color: rgba(68, 68, 68, 1);
 }
 
+.contacts-schedule {outline: 1px solid red;
+	padding-left: 0;
+	list-style-type: none;
+}
+
 /* 4.6.0 Mailing */
-.mailing {
+.mailing-wrapper {
 	background-color: rgba(240, 240, 240, 1);
 }
 
+.mailing {outline: 1px solid violet;
+	display: grid;
+	grid-template-columns: 600px 280px 280px;
+
+	width: 1160px;
+	margin: 0 auto;
+	padding-top: 75px;
+	padding-bottom: 130px;
+}
+
 .mailing-title {
+	margin-top: 0;
+	margin-bottom: 50px;
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 50px;
 	font-weight: 800;
 	line-height: 50px;
 	color: rgba(0, 0, 0, 1.0);
+}
+
+.mailing p {
+	grid-column-start: 2;
+    grid-column-end: 4;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.mailing-form {
+	grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+}
+
+.mailing-field {
+	width: 600px;
+	background-color: inherit;
+	border: 0 none transparent;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
 .mailing-field::placeholder {
@@ -281,6 +565,10 @@ body,
 }
 
 .mailing-button-subscribe {
+	box-sizing: border-box;
+	width: 260px;
+	height: 55px;
+
 	font-family: Raleway, Verdana, Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 800;
@@ -292,6 +580,12 @@ body,
 	border-width: 3px;
 	border-style: solid;
 	border-color: rgba(0, 0, 0, 0.1);
+}
+
+.checkbox {
+	margin-left: auto;
+	padding-left: 35px;
+	outline: 1px solid darkcyan;
 }
 
 
@@ -424,21 +718,66 @@ body,
 }
 
 /* 6.0 Footer (Base styles) ------------------------------------------------------------ */
-.page-footer {
+.page-footer {outline: 1px solid red;
 	background-color: rgba(68, 68, 68, 1);
 	color: rgba(255, 255, 255, 1.0);
 }
 
+.footer-top-string {outline: 1px solid pink;}
+.footer-bottom-string {outline: 1px solid green;}
+
+.footer-top-string,
+.footer-bottom-string {
+	display: flex;
+	justify-content: space-between;
+	width: 1160px;
+	margin: 0 auto 0 auto;
+}
+
+.footer-bottom-string {
+	justify-content: flex-end;
+}
+
 /* 6.1.0 Footer-address */
+.footer-address {
+	width: 240px;
+	padding-top: 60px;
+	outline: 1px dotted lime;
+}
+
+.footer-address-logo {
+	margin-bottom: 35px;
+}
+
 .footer-address address {
+	margin-bottom: 50px;
 	font-size: 16px;
 	font-style: normal;
 	line-height: 19px;
 }
 
+.footer-services {
+	width: 460px;
+	padding-top: 115px;
+	outline: 1px dashed lime;
+}
+
 .footer-services-list,
 .footer-socials-list {
+	list-style-type: none;
 	text-align: center;
+}
+
+.footer-services-list {
+	display: flex;
+}
+
+.footer-services-item {
+	margin-right: 7px;
+}
+
+.footer-services-list li:last-child {outline: 1px solid red;
+	margin-right: 0;
 }
 
 .footer-services-link {
@@ -451,6 +790,13 @@ body,
 	color: rgba(255, 255, 255, 1.0);
 }
 
+.footer-phone {
+	width: 295px;
+	padding-top: 135px;
+	outline: 1px dotted navy;
+	text-align: right;
+}
+
 .footer-phone address,
 .footer-phone-number {
 	font-size: 16px;
@@ -459,7 +805,28 @@ body,
 	color: rgba(255, 255, 255, 1.0);
 }
 
+.footer-socials-list {
+	outline: 1px solid red;
+	display: flex;
+	margin-top: 0;
+	margin-right: 390px;
+	margin-bottom: 60px;
+	padding-left: 0;
+}
+
+.footer-socials-item {
+	margin-right: 15px;
+}
+
+.footer-socials-list li:last-child {outline: 3px solid lime;
+	margin-right: 0;
+}
+
 .footer-social-button {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.3);
 	color: rgba(68, 68, 68, 1);
 }

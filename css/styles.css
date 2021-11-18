@@ -38,7 +38,8 @@ html {
 }
 
 /* 2.0 Body (Base styles) ------------------------------------------------------------ */
-body {
+body {outline: 8px solid yellow;
+	outline-offset: -8px;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
@@ -64,7 +65,8 @@ body,
 	background-color: rgba(255, 255, 255, 1.0);
 }
 
-.main-container {
+.main-container {outline: 12px double navy;
+	outline-offset: -12px;
 	flex-grow: 1;
 }
 
@@ -141,6 +143,8 @@ body,
 }
 
 .cart-navigation-list {outline: 1px solid blue;
+	display: flex;
+	justify-content: space-between;
 	width: 245px;
 	margin-top:  0;
 	margin-bottom: 0;
@@ -538,8 +542,7 @@ body,
 }
 
 .mailing p {
-	grid-column-start: 2;
-    grid-column-end: 4;
+	grid-column: span 2;
 
     margin-top: 0;
     margin-bottom: 50px;
@@ -547,8 +550,7 @@ body,
 }
 
 .mailing-form {
-	grid-column-start: 1;
-    grid-column-end: 4;
+	grid-column: span 3;
     display: flex;
 }
 
@@ -588,6 +590,7 @@ body,
 }
 
 .checkbox {
+	align-self: center;
 	margin-left: auto;
 	padding-left: 35px;
 	outline: 1px solid darkcyan;
@@ -837,7 +840,8 @@ body,
 }
 
 /* 6.0 Footer (Base styles) ------------------------------------------------------------ */
-.page-footer {outline: 1px solid red;
+.page-footer {outline: 4px solid red;
+	outline-offset: -4px;
 	background-color: rgba(68, 68, 68, 1);
 	color: rgba(255, 255, 255, 1.0);
 }
@@ -854,6 +858,14 @@ body,
 	margin-top: 0;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.footer-bottom-string h2 {
+	grid-column: span 3;
+}
+
+.footer-socials-list {
+	grid-column: span 2;
 }
 
 /* 6.1.0 Footer-address */
@@ -918,10 +930,6 @@ body,
 	font-style: normal;
 
 	color: rgba(255, 255, 255, 1.0);
-}
-
-.footer-socials {
-	grid-column: 1/3;
 }
 
 .footer-socials-list {

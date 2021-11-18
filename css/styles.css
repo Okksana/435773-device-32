@@ -795,7 +795,17 @@ body,
 	list-style-type: none;
 }
 
-.product-card-title {
+.product-card-pic {
+	margin-bottom: 35px;
+}
+
+.product-card-wrapper {
+	display: flex;
+}
+
+.product-card-title {outline: 1px solid red;
+	margin-top: 0;
+	margin-bottom: 0;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 24px;
@@ -804,8 +814,14 @@ body,
 	color: rgba(0, 0, 0, 1.0);
 }
 
-.product-card-price {
+.product-card-price {outline: 1px solid green;
+	margin-left: auto;
 	line-height: 21px;
+}
+
+.product-card-button,
+.catalog-filter-label {
+	display: none;
 }
 
 .pagination-load-more {

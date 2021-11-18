@@ -10,6 +10,7 @@
       <nav class="navigation">
         <a class="txt-decor" href="index.html"><img class="logo" src="img/logo/logo-device-top.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс»"></a>
 
+        <div class="header-first-row">
         <!-- Форма поиска по сайту -->
         <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="search-field">Поиск по сайту</label>
@@ -37,6 +38,7 @@
             <a class="cart-navigation-link txt-decor" href="#">Корзина</a>
           </li>
         </ul>
+        </div>
 
         <!-- Упрощенный каталог товаров по категориям -->
         <ul class="page-navigation-list">
@@ -203,9 +205,11 @@
               <li class="product-card">
                 <a class="product-card-link txt-decor hover" href="#">
                   <img class="product-card-pic" src="img/products/monopod-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                  <h3 class="product-card-title">Любительская селфи-палка</h3>
+                  <div class="product-card-wrapper">
+                    <h3 class="product-card-title">Любительская селфи-палка</h3>
+                    <span class="product-card-price">500 ₽</span>
+                  </div>
                 </a>
-                <span class="product-card-price">500 ₽</span>
 
                 <button class="product-card-button" type="button">Подробнее</button>
               </li>
@@ -213,9 +217,11 @@
               <li class="product-card">
                 <a class="product-card-link txt-decor" href="#">
                   <img class="product-card-pic" src="img/products/monopod-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                  <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+                  <div class="product-card-wrapper">
+                    <h3 class="product-card-title">Профессиональная<br> селфи-палка</h3>
+                    <span class="product-card-price">1500 ₽</span>
+                  </div>
                 </a>
-                <span class="product-card-price">1500 ₽</span>
 
                 <button class="product-card-button" type="button">Подробнее</button>
               </li>
@@ -223,9 +229,11 @@
               <li class="product-card">
                 <a class="product-card-link txt-decor" href="#">
                   <img class="product-card-pic" src="img/products/monopod-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                  <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                  <div class="product-card-wrapper">
+                    <h3 class="product-card-title">Непотопляемая<br> селфи-палка</h3>
+                    <span class="product-card-price">2500 ₽</span>
+                  </div>
                 </a>
-                <span class="product-card-price">2500 ₽</span>
 
                 <button class="product-card-button" type="button">Подробнее</button>
               </li>
@@ -233,9 +241,11 @@
               <li class="product-card">
                 <a class="product-card-link txt-decor new-product" href="#">
                   <img class="product-card-pic" src="img/products/monopod-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                  <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+                  <div class="product-card-wrapper">
+                    <h3 class="product-card-title">Селфи-палка «Следуй за<br> мной»</h3>
+                    <span class="product-card-price">4900 ₽</span>
+                  </div>
                 </a>
-                <span class="product-card-price">4900 ₽</span>
 
                 <button class="product-card-button" type="button">Подробнее</button>
               </li>
@@ -301,7 +311,7 @@
             <h2 class="visually-hidden">Телефон интернет-магазина «Девайс»</h2>
 
             <address>
-              <a class="footer-phone-number txt-decor" href="tel:88128121212">+7 (812) 812-12-12</a>
+              Тел.: <a class="footer-phone-number txt-decor" href="tel:88128121212">+7 (812) 812-12-12</a>
             </address>
           </section>
         </div>
